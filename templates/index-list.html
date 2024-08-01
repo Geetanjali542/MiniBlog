@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<section>
+  <h1 class="text-center text-primary" >Mini Blogs </h1>
+</section>
+<section class="section ">
+  <div class="container">
+    <div class="row bg-light pt-3 rounded-3 border border-warning">
+      {% for task in blog %}
+        <article class= "row mb-5" >
+          <div class="col-md-4 mb-4 mb-md-0">
+              <img
+                loading="lazy"
+                src="{{ task.image.url }}"
+                class="img-fluid"
+                alt="post-thumb"
+                style="height: 200px; object-fit: cover"
+              />
+          </div>
+
+          <div class="col-md-8">
+            <h3 class="h5">
+              <a class="post-title" href="post-elements.html"
+                >{{task.title}}</a
+              >
+            </h3>
+
+            <ul class="list-inline post-meta mb-2">
+
+              <li class="list-inline-item">
+                <i class="ti-user mr-2"></i
+                ><a href="author.html">{{ task.name }}</a>
+              </li>
+
+              <li class="list-inline-item">{{ task.created_at }}</li>
+              <li class="list-inline-item">
+                Categories : <a href="#!" class="ml-1">{{ task.categories }} </a>
+              </li>
+              <li class="list-inline-item">
+                Tags 
+                : <a href="#!" class="ml-1">{{ task.tag }} </a> 
+              </li>
+            </ul>
+            <p>
+              {{ task.content }}
+            </p>
+            <a href="{% url 'continueread' %}" class="btn btn-outline-primary"
+              >Continue Reading</a>
+              <a href="{% url 'add' %}" class="btn btn-outline-primary  mx-1"
+              >Add blog</a>
+              <a href="{% url 'editblog' task.pk %}" class="btn btn-outline-primary mx-1"
+              >Edit blog</a>
+              <a href="{% url 'deleteblog' task.pk %}" class="btn btn-outline-primary mx-1"
+              >Delete Blog</a>
+          </div>
+        </article>
+      {% endfor %}          
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+{% endblock content %}

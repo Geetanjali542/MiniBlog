@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<div class="container p-5">
+  <form action="#" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    
+    <div class="mb-3">
+      <label for="" class="form-label">First name</label>
+      <input type="text" class="form-control" name="name"  id="" />
+    </div>
+    <div class="mb-3">
+      <label for="" class="form-label">Enter the Title</label>
+      <input type="text" class="form-control" name="title"  id="" />
+    </div>
+    <div class="mb-3">
+      <label for="" class="form-label">Enter the Category</label>
+      <input type="text" class="form-control" name="categories"  id="" />
+    </div>
+    <div class="mb-3">
+      <label for="" class="form-label">Give the tag</label>
+      <input type="text" class="form-control" name="tag"  id="" />
+    </div>
+    <div class="mb-3">
+      <label for="" class="form-label">Image Upload</label>
+      <input class="form-control" type="file" name="image" id="">
+    </div>
+    <div class="mb-3">
+      <label for="" class="form-label">Content</label>
+      <textarea class="form-control" id="" rows="3" name="content">Enter your content</textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+
+  </form>
+</div>
+
+{% endblock content %}

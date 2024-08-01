@@ -1,0 +1,68 @@
+{% load static %}
+
+<footer class="section-sm pb-0 border-top border-default">
+  <div class="container">
+    <div class="row justify-content-between">
+      <div class="col-md-3 mb-4">
+        <a class="mb-4 d-block" href="index.html">
+          <img
+            class="img-fluid"
+            width="150px"
+            src="{% static 'images/logo.png' %}"
+            alt="LogBook"
+          />
+        </a>
+        <p class="text-dark fst-italic font-monospace">
+          
+          Logbook is a dynamic blogging platform where users can effortlessly create, share, and explore diverse content. With its user-friendly interface and customizable features, Logbook caters to bloggers of all levels, fostering a vibrant community of writers and readers.
+        </p>
+      </div>
+
+      <div class="col-lg-2 col-md-3 col-6 mb-4">
+        <h6 class="mb-4 fs-5">Quick Links</h6>
+        <ul class="list-unstyled footer-list">
+          <li><a href="{% url 'about' %}" class="text-black fs-6">About</a></li>
+          <li><a href="{% url 'contact' %}" class="text-black fs-6">Contact</a></li>
+          <li><a href="{% url 'privacypolicy' %}" class="text-black fs-6">Privacy Policy</a></li>
+          <li><a href="{% url 'termsconditions' %}" class="text-black fs-6">Terms Conditions</a></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-2 col-md-3 col-6 mb-4">
+        <h6 class="mb-4 fs-5">Social Links</h6>
+        <ul class="list-unstyled footer-list">
+          <li><a target="_blank" href="https://www.facebook.com/profile.php?id=61554925373832" class="text-black fs-6">facebook</a></li>
+          <li><a href="#" target="_blank" class="text-black fs-6">twitter</a></li>
+          <li><a href="https://www.linkedin.com/in/geetanjali-kushwaha/" target="_blank" class="text-black fs-6"> linkedin</a> </li>
+          <li><a href="https://github.com/Geetanjali542/" target="_blank" class="text-black fs-6">github</a></li>
+        </ul>
+      </div>
+
+     
+          <div class="position-relative">
+            <i class="ti-email email-icon"></i>
+            <input
+              type="email"
+              class="form-control"
+              placeholder="Your Email Address"
+            />
+          </div>
+          <button class="btn btn-primary btn-block rounded" type="submit">
+            Subscribe now
+          </button>
+        </form>
+      </div>
+    </div>
+    <div class="scroll-top">
+      <a href="javascript:void(0);" id="scrollTop"
+        ><i class="ti-angle-up"></i
+      ></a>
+    </div>
+    <div class="text-center">
+      <p class="content">
+        &copy; 2024 - Design &amp; Develop By
+        <a href="#" target="_blank">Geetanjali Kushwaha</a>
+      </p>
+    </div>
+  </div>
+</footer>

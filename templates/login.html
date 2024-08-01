@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+    <section>
+      <div
+        class="container bg-light border position-relative"
+        style="width: 30%; height: 450px; margin-top:5%">
+        {% comment %} <div
+          class="position-absolute top-50 start-50 translate-middle"
+          style="width: 30%; height: 450px"
+        > {% endcomment %}
+        <h1 class="text-center text-primary my-5">Login</h1>
+        <form action="#" method="" enctype="multipart/form-data">
+          {% csrf_token %}
+          
+          <div class="form-floating mb-4 ">
+            <input type="email" class="form-control border-primary rounded-pill" id="" placeholder="name@example.com">
+            <label for="">Email address</label>
+          </div>
+          <div class="form-floating mb-4">
+            <input type="password" class="form-control border-primary  rounded-pill" id="" placeholder="Password">
+            <label for="">Password</label>
+          </div>
+          
+            {% comment %} <button type="submit" class="btn btn-primary">Submit</button> {% endcomment %}
+            <button type="submit" class="btn btn-outline-primary px-4 " style="margin-left:9.5rem;">Submit</button>
+          
+
+        </form>
+      
+      
+      
+      {% comment %} </div> {% endcomment %}
+      </div>
+    </section>
+
+{% endblock content %}
+
+    <section>
+      <div
+        class="container bg-light border position-relative"
+        style="width: 30%; height: 450px; margin-top:5%">
+        {% comment %} <div
+          class="position-absolute top-50 start-50 translate-middle"
+          style="width: 30%; height: 450px"
+        > {% endcomment %}
+        <h1 class="text-center text-primary my-5">Login</h1>
+        <form action="#" method="" enctype="multipart/form-data">
+          {% csrf_token %}
+          
+          <div class="form-floating mb-4 ">
+            <input type="email" class="form-control border-primary rounded-pill" id="" placeholder="name@example.com">
+            <label for="">Email address</label>
+          </div>
+          <div class="form-floating mb-4">
+            <input type="password" class="form-control border-primary  rounded-pill" id="" placeholder="Password">
+            <label for="">Password</label>
+          </div>
+          
+            {% comment %} <button type="submit" class="btn btn-primary">Submit</button> {% endcomment %}
+            <button type="submit" class="btn btn-outline-primary px-4 " style="margin-left:9.5rem;">Submit</button>
+          
+
+        </form>
+      
+      
+      
+      {% comment %} </div> {% endcomment %}
+      </div>
+    </section>
+

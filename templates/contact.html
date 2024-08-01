@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+
+{% block content %}
+
+<div class="container mt-5 " style="height: 600px;, width: 100%;">
+  <h3 class="text-center text-primary  fst-italic font-monospace ">Ask Us Anything</h3>
+  <h3 class="text-center  text-primary  fst-italic font-monospace ">Or just Say Hi, </h3>
+
+<div class="container pt-3 ">
+  <form action="#" method="" enctype="multipart/form-data">
+   
+    <div class="mb-3">
+      <label for="" class="form-label">Full Name</label>
+      <input type="text" class="form-control" name=""  id="" placeholder="Enter your name"/>
+    </div>
+
+    <div class="mb-3">
+     <label for="" class="form-label">Email address</label>
+     <input type="email" class="form-control" id="" placeholder="john@gmail.com">
+     <div id="" class="form-text">We'll never share your email with anyone else.</div>
+
+   </div>
+   <div class="mb-3">
+     <label for="" class="form-label">Subject</label>
+     <input type="text" class="form-control" name=""  id="" placeholder="Enter the subject"/>
+   </div>
+
+   <div class="mb-3">
+     <label for="" class="form-label">Message</label>
+     <textarea class="form-control" id="" rows="3" name="">Type your message here!</textarea>
+   </div>
+
+   <button type="submit" class="btn btn-primary">Submit</button>
+ 
+  </div>
+</div>
+
+  </form>
+
+{% endblock content %}

@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<div class="container pt-5 ">
+  <form action="{% url 'editblog' objEdit.pk %}" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="mb-3">
+      <label for="" class="form-label">Full Name</label>
+      <input type="text" class="form-control" name="name"  id="" value="{{ objEdit.name }}"/>
+    </div>
+
+    <div class="mb-3">
+      <label for="" class="form-label">Enter the Title</label>
+      <input type="text" class="form-control" name="title"  id="" value="{{ objEdit.title }}" />
+    </div>
+
+
+    <div class="mb-3">
+      <label for="" class="form-label">Enter the Category</label>
+      <input type="text" class="form-control" name="categories"  id="" value="{{ objEdit.categories }}" />
+    </div>
+
+    <div class="mb-3">
+      <label for="" class="form-label">Give the tag</label>
+      <input type="text" class="form-control" name="tag"  id="" value="{{ objEdit.tag }}" />
+    </div>
+
+    <div class="mb-3">
+      <label for="" class="form-label">Image Upload</label>
+      <input class="form-control" type="file" name="image" placeholder="Upload an Image">
+    </div>
+
+
+    {% comment %} <input type='file' name='image' placeholder="Upload Image">  {% endcomment %}
+    
+    <div class="mb-3">
+      <label for="" class="form-label">Content</label>
+      <textarea class="form-control" id="" rows="3" name="content">{{ objEdit.content }}</textarea>
+    </div>
+
+ 
+
+      <button type="submit" class="btn btn-primary">Edit Success</button>
+  </form>
+</div>
+
+
+
+{% endblock content %}
